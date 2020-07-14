@@ -12,17 +12,17 @@ Preventing voltage collapse is critical for reliable operation of power systems.
 4. During training, weights of the first hidden layer transferred from the binary classifier are not altered, but only the second hidden layer and the output layer are fine-tuned
 
 ### 1. Binary Classifier
-> Input layer: large binary stability-labeled data set      
-> Hidden layer: ReLU activation     
-> Output layer: Hinge loss      
-> Optimizer: stochastic gradient descent (SGD) optimizer with momentum and Nesterov acceleration
+* Input layer: large binary stability-labeled data set      
+* Hidden layer: ReLU activation     
+* Output layer: Hinge loss      
+* Optimizer: stochastic gradient descent (SGD) optimizer with momentum and Nesterov acceleration
 
 ### 2. Margin Predictor
-> Input layer: small margin-labeled data set      
-> 1st hidden layer: pretrained layer from the binary classifier     
-> 2nd hidden layer: for regression      
-> Output layer: mean squared error (MSE) loss     
-> Optimizer: stochastic gradient descent (SGD) optimizer with momentum and Nesterov acceleration
+* Input layer: small margin-labeled data set      
+* 1st hidden layer: pretrained layer from the binary classifier     
+* 2nd hidden layer: for regression      
+* Output layer: mean squared error (MSE) loss     
+* Optimizer: stochastic gradient descent (SGD) optimizer with momentum and Nesterov acceleration
 
 ## Dataset
 Refer to [1]. Compared to [1], the data were generated from larger power system.
