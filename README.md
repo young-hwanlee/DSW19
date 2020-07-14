@@ -12,16 +12,16 @@ Preventing voltage collapse is critical for reliable operation of power systems.
 4. During training, weights of the first hidden layer transferred from the binary classifier are not altered, but only the second hidden layer and the output layer are fine-tuned
 
 ### 1. Binary Classifier
-> Input layer: large binary stability-labeled data set  
-> Hidden layer: ReLU activation
-> Output layer: Hinge loss
+> Input layer: large binary stability-labeled data set      
+> Hidden layer: ReLU activation     
+> Output layer: Hinge loss      
 > Optimizer: stochastic gradient descent (SGD) optimizer with momentum and Nesterov acceleration
 
 ### 2. Margin Predictor
-> Input layer: small margin-labeled data set
-> 1st hidden layer: pretrained layer from the binary classifier
-> 2nd hidden layer: for regression
-> Output layer: mean squared error (MSE) loss
+> Input layer: small margin-labeled data set      
+> 1st hidden layer: pretrained layer from the binary classifier     
+> 2nd hidden layer: for regression      
+> Output layer: mean squared error (MSE) loss     
 > Optimizer: stochastic gradient descent (SGD) optimizer with momentum and Nesterov acceleration
 
 ## Dataset
@@ -46,6 +46,7 @@ The trained classifier achieves an testing accuracy of 0.98.
 Method | Jacobian's SSV | Direct Learning | Transfer Learning
 ---- | ---- | ---- | ----
 Testing MSE | 15,876 | 4,817 | 1,624
+
 where
 * Jacobian's SSV: widely used voltage stability margin approximator; smallest singular value (SSV) of the Jacobian matrix from running power flow algorithms  
 * Direct learning: direct performance without transferring from a pre-trained binary classifier
