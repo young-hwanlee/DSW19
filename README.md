@@ -1,6 +1,8 @@
 # Learning to Infer Voltage Stability Margin Using Transfer Learning
 Published in: 2019 IEEE Data Science Workshop (DSW). For more information, please refer to the paper.
 
+* Tools: MATLAB (MATPOWER), Python (TensorFlow)
+
 ## Abstract
 Preventing voltage collapse is critical for reliable operation of power systems. A challenging problem is that the voltage stability margin, i.e., the distance from a given power proﬁle to the voltage stability boundary, is very computationally intensive to obtain. A novel machine learning based approach for real-time inference of voltage stability margin is developed, only needing a very small number of ofﬂine-computed voltage stability margin data. An accurate margin predictor is trained by ﬁrst training a binary stability classiﬁer and then transferring this pre-trained model to ﬁne-tune on the small data set of margins. Numerical simulations demonstrate that the proposed method signiﬁcantly outperforms Jacobian-based voltage stability margin estimation with even faster real-time computation.
 
